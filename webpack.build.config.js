@@ -12,7 +12,7 @@ function createConfig(entry, output) {
     entry,
     output,
     optimization: {
-      minimizer: [new UglifyJSPlugin()],
+      minimize: false,
     },
     module: {
       rules: [
