@@ -26,9 +26,20 @@ function createConfig(entry, output) {
           loaders: ['style-loader', 'css-loader'],
         },
         {
-          test: /\.(png|jpg|jpeg|gif|svg|woff|woff2)$/,
+          test: /\.(png|jpg|jpeg|gif|woff|woff2)$/,
           exclude: /node_modules/,
           loader: 'url-loader?limit=10000',
+        },
+        {
+          test: /\.svg$/,
+          use: [
+            {
+              loader: 'svg-url-loader',
+              options: {
+                limit: 10000,
+              },
+            },
+          ],
         },
       ],
     },
