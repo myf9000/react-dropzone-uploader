@@ -804,6 +804,7 @@ Dropzone.propTypes = {
 
 export default Dropzone
 export {
+  Dropzone,
   LayoutDefault as Layout,
   InputDefault as Input,
   PreviewDefault as Preview,
